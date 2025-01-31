@@ -1,7 +1,7 @@
 class Queue {
-  constructor() {
-    this.list = [];
-    this.size = 0;
+  constructor(list) {
+    this.list = list.length && Array.isArray(list) ? list : [];
+    this.size = Array.isArray(list) ? list.length : 0;
   }
 
   //add element at the end of the queue
@@ -42,5 +42,3 @@ class Queue {
 }
 
 module.exports = { Queue };
-
-const queue = new Queue();
