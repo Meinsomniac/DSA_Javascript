@@ -1,6 +1,6 @@
 class Queue {
   constructor(list) {
-    this.list = list.length && Array.isArray(list) ? list : [];
+    this.list = list?.length && Array.isArray(list) ? list : [];
     this.size = Array.isArray(list) ? list.length : 0;
   }
 
